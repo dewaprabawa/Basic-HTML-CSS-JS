@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <style>
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  box-sizing: border-box;
+}
+
+.gallery-section{
+  width: 100%;
+  padding: 60px 0;
+  background: white;
+  animation: slide 10s infinite;
+  background: lightcyan no-repeat ;
+  width: 100%;
+  height: 100%;
+}
+
+.inner-width{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.gallery-section h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+ 
+}
+
+.border{
+  width: 180px;
+  height: 4px;
+  background: #333;
+  margin: 60px auto;
+}
+
+.gallery-section .gallery{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  margin-top: 80px;
+ 
+}
+
+.gallery-section .image{
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-section .image img{
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.gallery-section .image:hover img{
+  transform: scale(1) rotate(90deg);
+  border-radius: 50%;
+}
+
+@keyframes slide{
+    0%{
+        background-color: lightcyan;
+    }
+
+    33%{
+        background-color: blanchedalmond;
+    }
+
+    67%{
+        background-color: cadetblue;
+    }
+}
+
+.arrowtwo{
+    bottom: 10%;
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+} 
+
+
+.arrowone{
+    top: 50px;
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+} 
+
+i{
+    color: cadetblue;
+
+   
+}
+
+
+@media screen and (max-width:960px) {
+  .gallery-section .image{
+    flex: 33.33%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .gallery-section .image{
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .gallery-section .image{
+    flex: 100%;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="gallery-section">
+           
+             
+      <div class="inner-width">
+        <!-- <h1>Main Page</h1> -->
+        <!-- <div class="border"></div> -->
+        <div class="gallery animated slideInUp delay-0.5s">
+                
+      
+
+          <a href="img/5.png" class="image">
+            <img src="img/5.png" alt="">
+          </a>
+
+          <a href="img/6.png" class="image">
+            <img src="img/6.png" alt="">
+          </a>
+
+          <a href="img/7.png" class="image">
+            <img src="img/7.png" alt="">
+          </a>
+
+          <a href="img/8.png" class="image">
+            <img src="img/8.png" alt="">
+          </a>
+
+        </div>
+      </div>
+    
+     
+    </div>
+    <div class="arrowone animated slideInUp delay-0.5s">
+            <a href="./form.html"><i class="fas fa-arrow-right"></i></a>
+           
+        </div>
+
+        <div class="arrowtwo animated slideInUp delay-0.5s">
+                <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
+               
+            </div>
+
+
+  <script>
+    $(".gallery").magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+    });
+  </script>
+
+  </body>
+</html>
